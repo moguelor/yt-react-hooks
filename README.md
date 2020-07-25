@@ -1,5 +1,5 @@
 # yt-react-hooks
-[YOUTUBE] Curso "React Hooks" creado para mi canal `moguelo-dev` en youtube.
+[YOUTUBE] Curso "React Hooks" creado para mi canal [mogueloDev](https://www.youtube.com/channel/UC7We0v9R6p88V7op23oCnWw) en youtube.
 
 # Empezar
 
@@ -15,17 +15,7 @@ yarn start
 
 # React Hooks
 
-1. [¿Por qué existen?](https://www.youtube.com/watch?v=RbXzq_9gwus)
-2. [Reglas](https://www.youtube.com/watch?v=W8SetthvF_4)
-3. [Estructura del proyecto](https://www.youtube.com/watch?v=zx7nngXN2ns)
-3. [useState [PENDING]]()
-4. [useEffect [PENDING]]()
-5. [useContext [PENDING]]()
-6. [useReducer [PENDING]]()
-6. [useCallback [PENDING]]()
-6. [useMemo [PENDING]]()
-6. [useRef [PENDING]]()
-6. [useImperativeHandle [PENDING]]()
-6. [useLayoutEffect [PENDING]]()
-6. [useDebugValue [PENDING]]()
+1. [¿Por qué existen?](https://www.youtube.com/watch?v=YPfkcpakS0E)
+2. [Reglas](https://www.youtube.com/watch?v=r0ogGbq5qbA)
+
 
