@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/yt-react-hooks/static/css/main.0c5cdb6d.chunk.css",
+    "main.js": "/yt-react-hooks/static/js/main.296dcf1e.chunk.js",
+    "main.js.map": "/yt-react-hooks/static/js/main.296dcf1e.chunk.js.map",
+    "runtime-main.js": "/yt-react-hooks/static/js/runtime-main.4d1cac47.js",
+    "runtime-main.js.map": "/yt-react-hooks/static/js/runtime-main.4d1cac47.js.map",
+    "static/js/2.eb0e69a6.chunk.js": "/yt-react-hooks/static/js/2.eb0e69a6.chunk.js",
+    "static/js/2.eb0e69a6.chunk.js.map": "/yt-react-hooks/static/js/2.eb0e69a6.chunk.js.map",
+    "index.html": "/yt-react-hooks/index.html",
+    "precache-manifest.481744f84372037299c89a4697451290.js": "/yt-react-hooks/precache-manifest.481744f84372037299c89a4697451290.js",
+    "service-worker.js": "/yt-react-hooks/service-worker.js",
+    "static/css/main.0c5cdb6d.chunk.css.map": "/yt-react-hooks/static/css/main.0c5cdb6d.chunk.css.map",
+    "static/js/2.eb0e69a6.chunk.js.LICENSE.txt": "/yt-react-hooks/static/js/2.eb0e69a6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4d1cac47.js",
+    "static/js/2.eb0e69a6.chunk.js",
+    "static/css/main.0c5cdb6d.chunk.css",
+    "static/js/main.296dcf1e.chunk.js"
+  ]
+}
