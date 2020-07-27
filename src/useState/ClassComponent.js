@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Card, Input, Button } from "../components";
-import { formatFormValue } from "../utils";
+import { objectToString, isEmptyObject } from "../utils";
 import validate from "./validate";
 
 class ClassComponent extends Component {
@@ -19,11 +19,13 @@ class ClassComponent extends Component {
     e.preventDefault();
 
     let errors = validate(this.state.formValues);
-    this.setState({ ...this.state, errors });
 
-    if (Object.keys(errors).length === 0) {
-      alert(formatFormValue(this.state.formValues));
+    if (!isEmptyObject(errors)) {
+      this.setState({ ...this.state, errors });
+      return;
     }
+
+    alert("Sent to api");
   };
 
   render() {
@@ -64,7 +66,7 @@ class ClassComponent extends Component {
             <Button>Ingresar</Button>
           </form>
         </Card>
-        <pre>{formatFormValue(this.state.formValues)}</pre>
+        <pre>{objectToString(this.state.formValues)}</pre>
       </>
     );
   }

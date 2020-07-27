@@ -1,3 +1,5 @@
-const formatFormValue = (value) => JSON.stringify(value, null, 1);
+const objectToString = (value) => JSON.stringify(value, null, 1);
 
-export { formatFormValue };
+const isEmptyObject = (object) => Object.keys(object).length === 0;
+
+export { objectToString, isEmptyObject };

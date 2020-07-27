@@ -23,7 +23,13 @@ const Error = styled.small`
   font-weight: 500;
 `;
 
-const Input = ({ label, type = "text", handleChange, value = "", error }) => {
+const Input = ({ 
+  type = "text", 
+  value = "",
+  handleChange, 
+  label, 
+  error 
+}) => {
   return (
     <FormGroup>
       <Label>{label}</Label>
