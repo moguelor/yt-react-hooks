@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Card, Input, Button } from "../components";
 import { objectToString, isEmptyObject } from "../utils";
-import validate from "./validate";
+import validate from './validate';
 
 const HookComponent = () => {
+
   const [user, setUser] = useState();
   const [password, setPassword] = useState();
   const [errors, setErrors] = useState({});
@@ -31,16 +32,16 @@ const HookComponent = () => {
           <Input
             label={"Usuario"}
             handleChange={(e) => setUser(e.target.value)}
-            value={user}
+            value={user} 
             error={errors.user}
-          />
+            />
           <Input
             type="password"
             label={"Contraseña"}
             value={password}
             handleChange={(e) => setPassword(e.target.value)}
             error={errors.password}
-          />
+            />
           <Button>Ingresar</Button>
         </form>
       </Card>
