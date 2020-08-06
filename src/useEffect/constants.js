@@ -1,0 +1,1 @@
+export const API_URL = 'https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=react.js&page=1';
