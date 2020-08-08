@@ -18,5 +18,6 @@ yarn start
 1. [¿Por qué existen?](https://www.youtube.com/watch?v=YPfkcpakS0E)
 2. [Reglas](https://www.youtube.com/watch?v=r0ogGbq5qbA)
 3. [Hook useState()](https://www.youtube.com/watch?v=h1DM2kY2mkA)
+3. [Hook useEffect()](https://www.youtube.com/watch?v=rsDCvmgGvXE)
 
 
