@@ -7,12 +7,12 @@ import UseEffectHookExample from "./useEffect/HookComponent";
 function App() {
   return (
     <div className="App">
-      <Router basename='/yt-react-hooks'>
+      <Router basename={`${process.env.PUBLIC_URL}`}>
         <Switch>
           <Route exact path="/">
             <UseStateHookExample />
           </Route>
-          <Route  path="/useState">
+          <Route path="/useState">
             <UseStateHookExample />
           </Route>
           <Route path="/useEffect">
