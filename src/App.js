@@ -1,21 +1,21 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import UseStateHookExample from "./useState/HookComponent";
 import UseEffectHookExample from "./useEffect/HookComponent";
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename='/yt-react-hooks'>
         <Switch>
-          <Route exact path="/yt-react-hooks">
+          <Route exact path="/">
             <UseStateHookExample />
           </Route>
-          <Route path="/yt-react-hooks/useState">
+          <Route  path="/useState">
             <UseStateHookExample />
           </Route>
-          <Route path="/yt-react-hooks/useEffect">
+          <Route path="/useEffect">
             <UseEffectHookExample />
           </Route>
         </Switch>
