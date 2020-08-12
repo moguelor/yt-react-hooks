@@ -3,6 +3,7 @@ import "./App.css";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import UseStateHookExample from "./useState/HookComponent";
 import UseEffectHookExample from "./useEffect/HookComponent";
+import UseContextExample from "./useContext/HookComponent";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route path="/useEffect">
             <UseEffectHookExample />
+          </Route>
+          <Route path="/useContext">
+            <UseContextExample />
           </Route>
         </Switch>
       </Router>
