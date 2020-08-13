@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Message from "./Message";
+import MainBar from "./MainBar";
 
-const StyledWrapper = styled.div`
+const Styled = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,14 +12,13 @@ const StyledWrapper = styled.div`
   position: fixed;
   color: #fff;
   top: 0;
-  left: 0;
 `;
 
 const Header = ({ language, setLanguage }) => {
   return (
-    <StyledWrapper>
-      <Message language={language} setLanguage={setLanguage} />
-    </StyledWrapper>
+    <Styled>
+      <MainBar language={language} setLanguage={setLanguage} />
+    </Styled>
   );
 };
 

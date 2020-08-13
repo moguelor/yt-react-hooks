@@ -4,9 +4,11 @@
  */
 
 /**
- * CUIDADO con afectar variables de estado dentro de tu efecto,
- * sin pasarle dependencias, ya que por cada renderizado estaría 
- * entrando al efecto y eso ocasionaría el ciclado de tu componente.
+ * CUIDADO con afectar variables de estado 
+ * dentro de tu efecto, sin pasarle dependencias en el arreglo, 
+ * ya que por cada re-renderizado estaría 
+ * entrando al efecto y eso ocasionaría 
+ * el ciclado de tu componente.
  */
 useEffect(() => {
     // ...

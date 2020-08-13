@@ -23,30 +23,4 @@ const HookComponent = () => {
   );
 };
 
-/**
-    <Header language={language} setLanguage={setLanguaje} > <-- language:NO setLanguage:NO
-          <Message language={language} setLanguage={setLanguaje}>  <-- language:SI setLanguage:NO
-              <ContainerLanguaje language={language} setLanguage={setLanguaje}> <-- language:NO setLanguage:NO
-                 <LanguageItem language={} setLanguage={} />  <-- language:SI setLanguage:SI
-              </ContainerLanguaje>
-          </Message>
-    </Header>
-    <Content language={language}> <-- language:SI
-        <CustomCard> 
-    </Content>
- */
-
-/**
-    <Header> 
-        <Message>  <-- Llamariamos al useContext.
-            <ContainerLanguaje>
-                <LanguageItem />  <-- Llamariamos al useContext
-            </ContainerLanguaje>
-        </Message>
-    </Header>
-    <Content> <-- Llamariamos al useContext
-        <CustomCard> 
-    </Content>
- */
-
 export default HookComponent;

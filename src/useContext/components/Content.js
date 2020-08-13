@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CustomCard from "./CustomCard";
 import i18n from "../i18n";
 
-const Wrapper = styled.div`
+const Styled = styled.div`
   flex-direction: row;
   display: flex;
   flex-wrap: wrap;
@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 
 const Content = ({ language }) => {
   return (
-    <Wrapper>
+    <Styled>
       <CustomCard
         text={i18n[language]["title1"]}
         description={i18n[language]["description1"]}
@@ -38,7 +38,7 @@ const Content = ({ language }) => {
         text={i18n[language]["title6"]}
         description={i18n[language]["description6"]}
       />
-    </Wrapper>
+    </Styled>
   );
 };
 
