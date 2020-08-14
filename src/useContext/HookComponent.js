@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { createGlobalStyle } from "styled-components";
 import { Header, Content } from "./components";
+import LanguageProvider, { DefaultValue } from "./providers/LanguageProvider";
 
 const GlobalStyle = createGlobalStyle`
     body { 
@@ -14,11 +15,18 @@ const GlobalStyle = createGlobalStyle`
 const HookComponent = () => {
   const [language, setLanguage] = useState("ES");
 
+  const value = {
+    language,
+    setLanguage,
+  };
+
   return (
     <>
       <GlobalStyle />
-      <Header language={language} setLanguage={setLanguage} />
-      <Content language={language} />
+      <LanguageProvider value={value}>
+        <Header />
+        <Content />
+      </LanguageProvider>
     </>
   );
 };

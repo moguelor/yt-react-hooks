@@ -7,14 +7,14 @@ const Styled = styled.div`
   font-weight: 600;
 `;
 
-const ContainerLanguage = ({ language, setLanguage }) => {
+const Languages = () => {
   return (
     <Styled>
-      <LanguageItem language={language} setLanguage={setLanguage} text="ES" /> |
-      <LanguageItem language={language} setLanguage={setLanguage} text="EN" /> |
-      <LanguageItem language={language} setLanguage={setLanguage} text="FR" />
+      <LanguageItem text="ES" /> |
+      <LanguageItem text="EN" /> |
+      <LanguageItem text="FR" />
     </Styled>
   );
 };
 
-export default ContainerLanguage;
+export default Languages;

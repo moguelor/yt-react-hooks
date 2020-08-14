@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import CustomCard from "./CustomCard";
 import i18n from "../i18n";
+import { LanguageContext } from '../providers/LanguageProvider';
 
 const Styled = styled.div`
   flex-direction: row;
@@ -11,7 +12,11 @@ const Styled = styled.div`
   padding: 60px 20px;
 `;
 
-const Content = ({ language }) => {
+const Content = () => {
+
+  const context = useContext(LanguageContext);
+  const language = context.language;
+  
   return (
     <Styled>
       <CustomCard

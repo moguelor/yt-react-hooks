@@ -2,7 +2,7 @@ import React from "react";
 
 const DefaultValue = {
   language: "ES",
-  setLanguage: () => {},
+  setLanguage: () => {}
 };
 
 const LanguageContext = React.createContext(DefaultValue);

@@ -14,10 +14,10 @@ const Styled = styled.div`
   top: 0;
 `;
 
-const Header = ({ language, setLanguage }) => {
+const Header = () => {
   return (
     <Styled>
-      <MainBar language={language} setLanguage={setLanguage} />
+      <MainBar />
     </Styled>
   );
 };

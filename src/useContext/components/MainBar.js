@@ -9,14 +9,13 @@ const Styled = styled.div`
   justify-content: space-between;
   width: 100%;
   padding: 20px;
-  font-size: 25px;
 `;
 
-const MainBar = ({ language, setLanguage }) => {
+const MainBar = () => {
   return (
     <Styled>
-      <Message language={language} />
-      <Languages language={language} setLanguage={setLanguage} />
+      <Message  />
+      <Languages />
     </Styled>
   );
 };

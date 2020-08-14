@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { LanguageContext } from "../providers/LanguageProvider";
 
 const Styled = styled.span`
   color: ${({ isActive = false }) => (isActive ? "#61dafb" : "#FFF")};
@@ -7,12 +8,13 @@ const Styled = styled.span`
   cursor: pointer;
 `;
 
-const LanguageItem = ({ language, setLanguage, text }) => {
-  
-  const isActive = text === language;
+const LanguageItem = ({ text }) => {
+
+  const context = useContext(LanguageContext);
+  const isActive = text === context.language;
 
   return (
-    <Styled onClick={() => setLanguage(text)} isActive={isActive}>
+    <Styled onClick={() => context.setLanguage(text)} isActive={isActive}>
       {text}
     </Styled>
   );
