@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/yt-react-hooks/static/css/main.d1c89aee.chunk.css",
-    "main.js": "/yt-react-hooks/static/js/main.f1ad7c63.chunk.js",
-    "main.js.map": "/yt-react-hooks/static/js/main.f1ad7c63.chunk.js.map",
+    "main.js": "/yt-react-hooks/static/js/main.d7ecfd6d.chunk.js",
+    "main.js.map": "/yt-react-hooks/static/js/main.d7ecfd6d.chunk.js.map",
     "runtime-main.js": "/yt-react-hooks/static/js/runtime-main.4d1cac47.js",
     "runtime-main.js.map": "/yt-react-hooks/static/js/runtime-main.4d1cac47.js.map",
-    "static/js/2.75944c33.chunk.js": "/yt-react-hooks/static/js/2.75944c33.chunk.js",
-    "static/js/2.75944c33.chunk.js.map": "/yt-react-hooks/static/js/2.75944c33.chunk.js.map",
+    "static/js/2.4c9ad50a.chunk.js": "/yt-react-hooks/static/js/2.4c9ad50a.chunk.js",
+    "static/js/2.4c9ad50a.chunk.js.map": "/yt-react-hooks/static/js/2.4c9ad50a.chunk.js.map",
     "index.html": "/yt-react-hooks/index.html",
-    "precache-manifest.d29b87c0e814f9095884eca5daa7ef15.js": "/yt-react-hooks/precache-manifest.d29b87c0e814f9095884eca5daa7ef15.js",
+    "precache-manifest.a086e9f697a856335574029ab95e8a41.js": "/yt-react-hooks/precache-manifest.a086e9f697a856335574029ab95e8a41.js",
     "service-worker.js": "/yt-react-hooks/service-worker.js",
     "static/css/main.d1c89aee.chunk.css.map": "/yt-react-hooks/static/css/main.d1c89aee.chunk.css.map",
-    "static/js/2.75944c33.chunk.js.LICENSE.txt": "/yt-react-hooks/static/js/2.75944c33.chunk.js.LICENSE.txt"
+    "static/js/2.4c9ad50a.chunk.js.LICENSE.txt": "/yt-react-hooks/static/js/2.4c9ad50a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4d1cac47.js",
-    "static/js/2.75944c33.chunk.js",
+    "static/js/2.4c9ad50a.chunk.js",
     "static/css/main.d1c89aee.chunk.css",
-    "static/js/main.f1ad7c63.chunk.js"
+    "static/js/main.d7ecfd6d.chunk.js"
   ]
 }
