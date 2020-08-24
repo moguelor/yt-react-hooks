@@ -16,6 +16,13 @@ const StyledInput = styled.input`
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
+
+  ::placeholder {
+    font-size: 15px;
+    font-family: Roboto;
+    padding: 10px;
+    font-weight: 300;
+  }
 `;
 
 const Error = styled.small`
@@ -23,17 +30,23 @@ const Error = styled.small`
   font-weight: 500;
 `;
 
-const Input = ({ 
-  type = "text", 
+const Input = ({
+  type = "text",
   value = "",
-  handleChange, 
-  label, 
-  error 
+  handleChange,
+  label,
+  error,
+  placeholder,
 }) => {
   return (
     <FormGroup>
       <Label>{label}</Label>
-      <StyledInput value={value} type={type} onChange={handleChange} />
+      <StyledInput
+        value={value}
+        type={type}
+        onChange={handleChange}
+        placeholder={placeholder}
+      />
       <Error>{error && error}</Error>
     </FormGroup>
   );

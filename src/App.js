@@ -4,6 +4,7 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import UseStateHookExample from "./useState/HookComponent";
 import UseEffectHookExample from "./useEffect/HookComponent";
 import UseContextExample from "./useContext/HookComponent";
+import UseReducerExample from "./useReducer/HookComponent";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/useContext">
             <UseContextExample />
+          </Route>
+          <Route path="/useReducer">
+            <UseReducerExample />
           </Route>
         </Switch>
       </Router>
