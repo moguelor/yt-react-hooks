@@ -8,17 +8,16 @@ const Styled = styled.div`
   cursor: pointer;
   transition: all 0.1s linear;
 
-  ${({ done = false }) =>
-    done && "text-decoration: line-through; color: #c8cacc;"}
-
-  :hover {
-    text-decoration: line-through;
-    color: #c8cacc;
-  }
+  ${({ isActive = false }) =>
+    !isActive && "text-decoration: line-through; color: #c8cacc;"}
 `;
 
-const Item = ({done}) => {
-  return <Styled done={done} >Item</Styled>;
+const Item = ({ text, isActive, handleClickItem }) => {
+  return (
+    <Styled onClick={handleClickItem} isActive={isActive}>
+      {text}
+    </Styled>
+  );
 };
 
 export default Item;

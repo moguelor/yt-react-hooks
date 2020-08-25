@@ -1,46 +1,39 @@
-import React from "react";
-import styled from "styled-components";
-import { Item, Footer } from "./components";
-
-const Card = styled.div`
-  background-color: #fff;
-  width: 400px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  border: 1px solid #ececec;
-  padding: 0px;
-  border-radius: 5px;
-`;
-
-const Input = styled.input`
-  box-sizing: border-box;
-  width: 100%;
-  font-size: 20px;
-  padding: 16px;
-  border: none;
-  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
-  outline: none;
-  font-family: roboto;
-  font-weight: 100;
-
-  ::placeholder  {
-    font-weight: 300;
-    font-style: italic;
-    color: #c8cacc;
-  }
-`;
-
-const Title = styled.div`
-  font-size: 80px;
-  font-weight: 300;
-  color: #af2f2f26;
-  margin-bottom: 10px;
-  width: 100%;
-  text-align: center;
-`;
+import React, { useReducer, useMemo } from "react";
+import { Item, Footer, Card, Input, Title } from "./components";
+import reducer, { INITIAL_STATE, init } from "./reducer";
+import { objectToString } from "../utils";
+import {
+  handleChangeInput,
+  addItem,
+  resetInput,
+  toggleItem,
+  setActiveFilter,
+  clearCompleted,
+  resetState,
+} from "./actions";
 
 const HookComponent = () => {
+  const [state, dispatch] = useReducer(reducer, INITIAL_STATE, init);
+  const { text, items, activeFilter } = state;
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(addItem());
+    dispatch(resetInput());
+  };
+
+  const filteredData = () => {
+    const filterByStatus = items.filter((item) =>
+      state.activeFilter === "all"
+        ? true
+        : state.activeFilter === "active"
+        ? item.active
+        : !item.active
+    );
+
+    return text
+      ? filterByStatus.filter((item) => item.text.indexOf(text) > -1)
+      : filterByStatus;
   };
 
   return (
@@ -48,14 +41,29 @@ const HookComponent = () => {
       <Title>todos</Title>
       <Card width={450}>
         <form onSubmit={handleSubmit}>
-          <Input placeholder="¿What are you thinking to do?" />
+          <Input
+            placeholder="What are you thinking to do?"
+            onChange={(e) => dispatch(handleChangeInput(e.target.value))}
+            value={text}
+          />
         </form>
-        <Item> Hola </Item>
-        <Item> Hola </Item>
-        <Item> Hola </Item>
-        <Item> Hola </Item>
-        <Footer />
+        {filteredData().map((item, i) => (
+          <Item
+            key={i}
+            text={item.text}
+            isActive={item.active}
+            handleClickItem={() => dispatch(toggleItem(item.id))}
+          />
+        ))}
+        <Footer
+          totalItems={items.filter((item) => item.active).length}
+          handleClickFilter={(filter) => dispatch(setActiveFilter(filter))}
+          active={activeFilter}
+          handleClickClear={() => dispatch(clearCompleted())}
+          handleClickReset={() => dispatch(resetState())}
+        />
       </Card>
+      <pre>{objectToString(state)}</pre>
     </>
   );
 };

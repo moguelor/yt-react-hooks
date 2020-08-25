@@ -1,21 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-const Container = styled.div`
-  padding: 8px 16px;
-  font-size: 12px;
+const Align = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #777;
 `;
 
-const NumItems = styled.div``;
+const ContainerButtons = styled(Align)``;
 
-const Filters = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+const Container = styled(Align)`
+  padding: 8px 16px;
+  font-size: 12px;
+  color: #777;
 `;
 
 const Button = styled.div`
@@ -23,21 +20,47 @@ const Button = styled.div`
   border: none;
   font-size: 12px;
   margin: 5px;
-  border: ${({isActive = false }) => isActive ? '1px solid #777' : 'none' };
+  border: ${({ isActive = false }) => (isActive ? "1px solid #777" : "none")};
   border-radius: 2px;
   padding: 3px 5px;
+  cursor: pointer;
+  text-align: center;
 `;
 
-const Footer = () => {
+const Footer = ({
+  totalItems,
+  active,
+  handleClickFilter,
+  handleClickClear,
+  handleClickReset,
+}) => {
   return (
     <Container>
-      <NumItems>8 items left</NumItems>
-      <Filters>
-        <Button isActive> All </Button>
-        <Button> Active </Button>
-        <Button > Complete </Button>
-      </Filters>
-      <Button>Clear</Button>
+      <div>{totalItems} items left</div>
+      <ContainerButtons>
+        <Button
+          isActive={active === "all"}
+          onClick={() => handleClickFilter("all")}
+        >
+          All
+        </Button>
+        <Button
+          isActive={active === "active"}
+          onClick={() => handleClickFilter("active")}
+        >
+          Active
+        </Button>
+        <Button
+          isActive={active === "complete"}
+          onClick={() => handleClickFilter("complete")}
+        >
+          Complete
+        </Button>
+      </ContainerButtons>
+      <ContainerButtons>
+        <Button onClick={handleClickClear}>Clear</Button>
+        <Button onClick={handleClickReset}>Reset</Button>
+      </ContainerButtons>
     </Container>
   );
 };
