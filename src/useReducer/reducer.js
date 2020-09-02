@@ -1,10 +1,10 @@
 import {
   HANDLE_CHANGE_INPUT,
-  ADD,
+  ADD_ITEM,
   RESET_INPUT,
-  CLEAR_COMPLETED,
-  SET_ACTIVE_FILTER,
   TOGGLE_ITEM,
+  SET_ACTIVE_FILTER,
+  CLEAR_COMPLETED,
   RESET_STATE,
 } from "./constants";
 
@@ -32,30 +32,29 @@ const INITIAL_STATE = {
       text: "Learn hook useReducer",
       active: true,
     },
-    {
-      id: 5,
-      text: "Learn hook useCallback",
-      active: true,
-    },
   ],
 };
 
 const init = () => {
-  return INITIAL_STATE;
+    return INITIAL_STATE;
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
     case HANDLE_CHANGE_INPUT:
-      return { ...state, text: action.payload };
+      return {
+        ...state,
+        text: action.payload,
+      };
 
-    case ADD:
+    case ADD_ITEM:
       return {
         ...state,
         items: [
           { id: new Date().valueOf(), text: state.text, active: true },
           ...state.items,
         ],
+        text: action.payload,
       };
 
     case RESET_INPUT:
@@ -82,7 +81,7 @@ const reducer = (state, action) => {
       };
 
     case RESET_STATE:
-      return init();
+        return init();
 
     default:
       return state;

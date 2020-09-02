@@ -1,11 +1,11 @@
 import {
-  ADD,
   HANDLE_CHANGE_INPUT,
+  ADD_ITEM,
   RESET_INPUT,
   TOGGLE_ITEM,
   SET_ACTIVE_FILTER,
   CLEAR_COMPLETED,
-  RESET_STATE
+  RESET_STATE,
 } from "./constants";
 
 export const handleChangeInput = (value) => ({
@@ -13,9 +13,7 @@ export const handleChangeInput = (value) => ({
   payload: value,
 });
 
-export const addItem = () => ({
-  type: ADD,
-});
+export const addItem = () => ({ type: ADD_ITEM });
 
 export const resetInput = () => ({ type: RESET_INPUT });
 
@@ -30,9 +28,9 @@ export const setActiveFilter = (filter) => ({
 });
 
 export const clearCompleted = () => ({
-  type: CLEAR_COMPLETED,
+    type: CLEAR_COMPLETED,
 });
 
 export const resetState = () => ({
-  type: RESET_STATE
+    type: RESET_STATE,
 });
