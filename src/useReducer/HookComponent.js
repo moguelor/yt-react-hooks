@@ -1,7 +1,7 @@
-import React, { useReducer, useMemo } from "react";
+import React, { useReducer } from "react";
 import { Item, Footer, Card, Input, Title } from "./components";
-import reducer, { INITIAL_STATE, init } from "./reducer";
 import { objectToString } from "../utils";
+import reducer, { INITIAL_STATE, init } from "./reducer";
 import {
   handleChangeInput,
   addItem,
@@ -9,18 +9,12 @@ import {
   toggleItem,
   setActiveFilter,
   clearCompleted,
-  resetState,
+  resetState
 } from "./actions";
 
 const HookComponent = () => {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE, init);
-  const { text, items, activeFilter } = state;
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(addItem());
-    dispatch(resetInput());
-  };
+  const { text, activeFilter, items } = state;
 
   const filteredData = () => {
     const filterByStatus = items.filter((item) =>
@@ -36,10 +30,16 @@ const HookComponent = () => {
       : filterByStatus;
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(addItem());
+    dispatch(resetInput());
+  };
+
   return (
     <>
       <Title>todos</Title>
-      <Card width={450}>
+      <Card width={400}>
         <form onSubmit={handleSubmit}>
           <Input
             placeholder="What are you thinking to do?"
@@ -47,9 +47,8 @@ const HookComponent = () => {
             value={text}
           />
         </form>
-        {filteredData().map((item, i) => (
+        {filteredData().map((item) => (
           <Item
-            key={i}
             text={item.text}
             isActive={item.active}
             handleClickItem={() => dispatch(toggleItem(item.id))}

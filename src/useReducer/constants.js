@@ -1,5 +1,5 @@
 export const HANDLE_CHANGE_INPUT = 'useReducer/handleChangeInput';
-export const ADD = 'useReducer/add';
+export const ADD_ITEM = 'useReducer/addItem';
 export const RESET_INPUT = 'useReducer/resetInput';
 export const TOGGLE_ITEM = 'useReducer/toggleItem';
 export const SET_ACTIVE_FILTER = 'useReducer/activeFilter';
