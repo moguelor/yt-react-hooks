@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/yt-react-hooks/static/css/main.d1c89aee.chunk.css",
-    "main.js": "/yt-react-hooks/static/js/main.1e0aad97.chunk.js",
-    "main.js.map": "/yt-react-hooks/static/js/main.1e0aad97.chunk.js.map",
+    "main.js": "/yt-react-hooks/static/js/main.b05a88cf.chunk.js",
+    "main.js.map": "/yt-react-hooks/static/js/main.b05a88cf.chunk.js.map",
     "runtime-main.js": "/yt-react-hooks/static/js/runtime-main.4d1cac47.js",
     "runtime-main.js.map": "/yt-react-hooks/static/js/runtime-main.4d1cac47.js.map",
     "static/js/2.4736e27d.chunk.js": "/yt-react-hooks/static/js/2.4736e27d.chunk.js",
     "static/js/2.4736e27d.chunk.js.map": "/yt-react-hooks/static/js/2.4736e27d.chunk.js.map",
     "index.html": "/yt-react-hooks/index.html",
-    "precache-manifest.f590e8c0a46ad7f2c7c77ac7ca306df3.js": "/yt-react-hooks/precache-manifest.f590e8c0a46ad7f2c7c77ac7ca306df3.js",
+    "precache-manifest.134584f751193f8b164b45b89ab73d4d.js": "/yt-react-hooks/precache-manifest.134584f751193f8b164b45b89ab73d4d.js",
     "service-worker.js": "/yt-react-hooks/service-worker.js",
     "static/css/main.d1c89aee.chunk.css.map": "/yt-react-hooks/static/css/main.d1c89aee.chunk.css.map",
     "static/js/2.4736e27d.chunk.js.LICENSE.txt": "/yt-react-hooks/static/js/2.4736e27d.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4d1cac47.js",
     "static/js/2.4736e27d.chunk.js",
     "static/css/main.d1c89aee.chunk.css",
-    "static/js/main.1e0aad97.chunk.js"
+    "static/js/main.b05a88cf.chunk.js"
   ]
 }
