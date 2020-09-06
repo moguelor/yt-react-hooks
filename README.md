@@ -20,5 +20,6 @@ yarn start
 3. [Hook useState()](https://www.youtube.com/watch?v=h1DM2kY2mkA)
 4. [Hook useEffect()](https://www.youtube.com/watch?v=rsDCvmgGvXE)
 5. [Hook useContext()](https://www.youtube.com/watch?v=DzsIFjfyjSc)
+6. [Hook useReducer()](https://youtu.be/XwfM9GLBr3I)
 
 
