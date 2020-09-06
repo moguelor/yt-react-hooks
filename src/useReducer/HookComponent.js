@@ -14,6 +14,7 @@ import {
 
 const HookComponent = () => {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE, init);
+  
   const { text, activeFilter, items } = state;
 
   const filteredData = () => {
@@ -39,7 +40,7 @@ const HookComponent = () => {
   return (
     <>
       <Title>todos</Title>
-      <Card width={400}>
+      <Card width={350}>
         <form onSubmit={handleSubmit}>
           <Input
             placeholder="What are you thinking to do?"
