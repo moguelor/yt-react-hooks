@@ -21,7 +21,7 @@ const StyledInput = styled.input`
     font-size: 15px;
     font-family: Roboto;
     padding: 10px;
-    font-weight: 300;
+    font-weight: 100;
   }
 `;
 
