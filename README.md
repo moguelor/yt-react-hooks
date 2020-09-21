@@ -1,19 +1,19 @@
 # yt-react-hooks [Live Demo](https://moguelor.github.io/yt-react-hooks/) 
-[YOUTUBE] Curso "React Hooks" creado para mi canal [mogueloDev](https://www.youtube.com/channel/UC7We0v9R6p88V7op23oCnWw) en youtube.
+[YOUTUBE] Course "React Hooks" created for my channel [mogueloDev](https://www.youtube.com/channel/UC7We0v9R6p88V7op23oCnWw) on youtube.
 
-# Empezar
+# Init
 
-1. Instalar dependiencias con yarn o npm.
+1. Install dependencies with yarn or npm.
 ```
 yarn install
 ```
 
-2. Iniciar aplicación.
+2. Start application.
 ```
 yarn start
 ```
 
-# React Hooks
+# List React Hooks
 
 1. [¿Por qué existen?](https://www.youtube.com/watch?v=YPfkcpakS0E)
 2. [Reglas](https://www.youtube.com/watch?v=r0ogGbq5qbA)
