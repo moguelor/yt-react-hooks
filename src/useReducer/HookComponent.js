@@ -9,19 +9,19 @@ import {
   toggleItem,
   setActiveFilter,
   clearCompleted,
-  resetState
+  resetState,
 } from "./actions";
 
 const HookComponent = () => {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE, init);
-  
+
   const { text, activeFilter, items } = state;
 
   const filteredData = () => {
     const filterByStatus = items.filter((item) =>
-      state.activeFilter === "all"
+      activeFilter === "all"
         ? true
-        : state.activeFilter === "active"
+        : activeFilter === "active"
         ? item.active
         : !item.active
     );
@@ -39,31 +39,32 @@ const HookComponent = () => {
 
   return (
     <>
-      <Title>todos</Title>
-      <Card width={350}>
-        <form onSubmit={handleSubmit}>
-          <Input
-            placeholder="What are you thinking to do?"
-            onChange={(e) => dispatch(handleChangeInput(e.target.value))}
-            value={text}
+        <Title>todos</Title>
+        <Card width={350}>
+          <form onSubmit={handleSubmit}>
+            <Input
+              placeholder="What are you thinking to do?"
+              onChange={(e) => dispatch(handleChangeInput(e.target.value))}
+              value={text}
+            />
+          </form>
+          {filteredData().map((item) => (
+            <Item
+              key={item.id}
+              text={item.text}
+              isActive={item.active}
+              handleClickItem={() => dispatch(toggleItem(item.id))}
+            />
+          ))}
+          <Footer
+            totalItems={items.filter((item) => item.active).length}
+            handleClickFilter={(filter) => dispatch(setActiveFilter(filter))}
+            active={activeFilter}
+            handleClickClear={() => dispatch(clearCompleted())}
+            handleClickReset={() => dispatch(resetState())}
           />
-        </form>
-        {filteredData().map((item) => (
-          <Item
-            text={item.text}
-            isActive={item.active}
-            handleClickItem={() => dispatch(toggleItem(item.id))}
-          />
-        ))}
-        <Footer
-          totalItems={items.filter((item) => item.active).length}
-          handleClickFilter={(filter) => dispatch(setActiveFilter(filter))}
-          active={activeFilter}
-          handleClickClear={() => dispatch(clearCompleted())}
-          handleClickReset={() => dispatch(resetState())}
-        />
-      </Card>
-      <pre>{objectToString(state)}</pre>
+        </Card>
+        <pre>{objectToString(state)}</pre>
     </>
   );
 };

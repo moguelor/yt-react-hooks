@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Profiler } from "react";
 import { Card, Input, Button } from "../components";
 import { objectToString, isEmptyObject } from "../utils";
 import validate from './validate';
