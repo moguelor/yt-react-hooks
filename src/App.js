@@ -5,7 +5,7 @@ import UseStateHookExample from "./useState/HookComponent";
 import UseEffectHookExample from "./useEffect/HookComponent";
 import UseContextExample from "./useContext/HookComponent";
 import UseReducerExample from "./useReducer/HookComponent";
-import UseCallbackExample from "./useCallback/HookComponent";
+import MemoizationExample from "./memoization/HookComponent";
 
 function App() {
   return (
@@ -27,8 +27,8 @@ function App() {
           <Route path="/useReducer">
             <UseReducerExample />
           </Route>
-          <Route path="/useCallback">
-            <UseCallbackExample />
+          <Route path="/memoization">
+            <MemoizationExample />
           </Route>
         </Switch>
       </Router>
