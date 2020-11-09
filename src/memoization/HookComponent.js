@@ -23,8 +23,7 @@ const HookComponent = () => {
     setTerm(e.target.value);
   };
 
-  const filteredData = () =>
-    data.filter((item) => item.title.indexOf(term) > -1);
+  const filteredData = data.filter((item) => item.title.indexOf(term) > -1);
 
   // Counters
   const [loveCounter, setLoveCounter] = useState(0);
