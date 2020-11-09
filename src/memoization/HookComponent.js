@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { API_URL } from "./constants";
-import LikeButton from "./components/LikeButton";
-import HateButton from "./components/HateButton";
-import Post from "./components/Posts";
+import Button from "./components/Button";
+import Posts from "./components/Posts";
 import { Input } from "../components";
 
 const HookComponent = () => {
+  // Call api Service
   const [data, setData] = useState([]);
-  const [term, setTerm] = useState("");
-  const [loveCounter, setLoveCounter] = useState(0);
-  const [hateCounter, setHateCounter] = useState(0);
 
   useEffect(() => {
     const callApi = async () => {
@@ -19,13 +16,19 @@ const HookComponent = () => {
     callApi();
   }, []);
 
+  // Filter posts.
+  const [term, setTerm] = useState("");
+
   const handleChange = (e) => {
     setTerm(e.target.value);
   };
 
-  const filteredData = term
-    ? data.filter((item) => item.title.indexOf(term) > -1)
-    : data;
+  const filteredData = () =>
+    data.filter((item) => item.title.indexOf(term) > -1);
+
+  // Counters
+  const [loveCounter, setLoveCounter] = useState(0);
+  const [hateCounter, setHateCounter] = useState(0);
 
   const handleClickButtonLove = () => {
     setLoveCounter(loveCounter + 1);
@@ -39,11 +42,19 @@ const HookComponent = () => {
     <div>
       <h3>
         Posts{" "}
-        <LikeButton handleClick={handleClickButtonLove} times={loveCounter} />{" "}
-        <HateButton handleClick={handleClickButtonHate} times={hateCounter} />
+        <Button
+          icon="heart"
+          times={loveCounter}
+          handleClick={handleClickButtonLove}
+        />
+        <Button
+          icon="angry"
+          times={hateCounter}
+          handleClick={handleClickButtonHate}
+        />
       </h3>
       <Input handleChange={handleChange} placeholder="Search..." value={term} />
-      <Post data={filteredData} />
+      <Posts data={filteredData} />
     </div>
   );
 };

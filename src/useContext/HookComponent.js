@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createGlobalStyle } from "styled-components";
 import { Header, Content } from "./components";
-import LanguageProvider, { DefaultValue } from "./providers/LanguageProvider";
+import LanguageProvider from "./providers/LanguageProvider";
 
 const GlobalStyle = createGlobalStyle`
     body { 

@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "../../components";
 
 const Posts = ({ data }) => {
+
   return (
     <div>
       {data.map((post) => (
