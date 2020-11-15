@@ -5,7 +5,7 @@ export default styled.div`
     padding: 1.5rem;
     margin-right: 0;
     margin-left: 0;
-    width: ${({width = 300}) => width}px;
+    max-width: ${({width = 300}) => width}px;
     margin: 10px 0px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `;
