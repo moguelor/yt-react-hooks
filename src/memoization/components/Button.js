@@ -24,4 +24,4 @@ const Button = ({ icon, handleClick, times }) => {
   );
 };
 
-export default Button;
+export default React.memo(Button);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { API_URL } from "./constants";
 import Button from "./components/Button";
 import Posts from "./components/Posts";
@@ -23,19 +23,22 @@ const HookComponent = () => {
     setTerm(e.target.value);
   };
 
-  const filteredData = data.filter((item) => item.title.indexOf(term) > -1);
+  const filteredData = useMemo(
+    () => data.filter((item) => item.title.indexOf(term) > -1),
+    [data, term]
+  );
 
   // Counters
   const [loveCounter, setLoveCounter] = useState(0);
   const [hateCounter, setHateCounter] = useState(0);
 
-  const handleClickButtonLove = () => {
+  const handleClickButtonLove = useCallback(() => {
     setLoveCounter(loveCounter + 1);
-  };
+  }, [loveCounter]);
 
-  const handleClickButtonHate = () => {
+  const handleClickButtonHate = useCallback(() => {
     setHateCounter(hateCounter + 1);
-  };
+  }, [hateCounter]);
 
   return (
     <div>

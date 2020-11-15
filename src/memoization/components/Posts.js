@@ -15,4 +15,4 @@ const Posts = ({ data }) => {
   );
 };
 
-export default Posts;
+export default React.memo(Posts);
